@@ -1,3 +1,5 @@
+const ingressos = [];
+
 function addRedBorder(id){
     element = document.querySelector("#"+ id);
     element.style.border = "5px solid red";
@@ -43,6 +45,19 @@ function addKeyboardEventListeners(){
             ingresso4.classList.toggle("card-highlight");
         }
     }, false);
+}
+
+
+//adicionar no array quando clicar, adicionando a class card-selector, caso ja tenha a class e clicar novamente sera removido do array.
+function selectCard(selector){
+    var element = document.querySelector(selector);
+    element.classList.toggle("card-selected");
+    if(ingressos.includes(selector)) ingressos.pop(selector);
+    else ingressos.push(selector)
+}
+
+function showSelectedCards(){
+    if(ingressos.length > 0) alert("Ingressos Selecionados:" + ingressos);
 }
 
 addKeyboardEventListeners();

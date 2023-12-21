@@ -3,7 +3,7 @@ const hora = document.getElementById('hora')
 const minuto = document.getElementById('minuto')
 const segundo = document.getElementById('segundo')
 
-const lancamento = "30 nov 2023"
+const lancamento = "30 jan 2024"
 
 function countDown(){
     const dataLanc = new Date(lancamento)
