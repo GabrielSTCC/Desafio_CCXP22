@@ -1,11 +1,19 @@
 const ingressos = [];
 
 function addRedBorder(id){
-    element = document.querySelector("#"+ id);
+    // element = document.querySelector("#"+ id);
+    element = document.querySelector(`#${id}`);
     element.style.border = "5px solid red";
 }
 
-// addRedBorder("quinta")
+function checkKeyboardCode(){
+    document.addEventListener("keydown",
+    (event) => {
+        var name = event.key;
+        var code = event.code;
+        alert(`Tecla Pressionada ${name} \r\n Valor da chave: ${code}`);
+    }, false);
+}
 
 function highlightCard(selector){
     var element = document.querySelector(selector);
@@ -49,14 +57,16 @@ function addKeyboardEventListeners(){
 
 
 //adicionar no array quando clicar, adicionando a class card-selector, caso ja tenha a class e clicar novamente sera removido do array.
-function selectCard(selector){
+selectCard = (selector) =>
+{
     var element = document.querySelector(selector);
     element.classList.toggle("card-selected");
     if(ingressos.includes(selector)) ingressos.pop(selector);
     else ingressos.push(selector)
 }
 
-function showSelectedCards(){
+showSelectedCards = () => 
+{
     if(ingressos.length > 0) alert("Ingressos Selecionados:" + ingressos);
 }
 
