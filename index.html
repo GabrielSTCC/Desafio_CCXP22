@@ -10,54 +10,63 @@
     <header>
         <img src="img/logoCCXP.svg" alt="">
     </header>
-    <div id="principal">
-        <div id="texto">
-            <h1 class="tituloEsub" id="titulo">REVIVA O ÉPICO</h1>
-            <h3 class="tituloEsub">DE 01 A 04 DE DEZEMBRO</h3>
-            <p>Você consegue sentir? É aquela sensação de 
-                finalmente poder falar em voz alta: "estamos em casa". 
-                Sim, em dezembro de 2022, teremos a volta da CCXP física. 
-                Mas não será qualquer CCXP, vai ser a maior de todos os tempos. 
-                Prepare-se para visitar seus universos favoritos, explorar o 
-                Artists' Valley, se emocionar nos auditórios e encontrar aventuras 
-                épicas a cada passo pelos nossos corredores.</p>
-        </div>
-        <div id="animado">
-            <div class="timer">
-                <div>
-                    <h1 class="relogio" id="dia">00D</h1>
-                    
-                </div>
-                <div>
-                    <h1 class="relogio" id="hora">00H</h1>
-                    
-                </div>
-                <div>
-                    <h1 class="relogio" id="minuto">00M</h1>
-                    
-                </div>
-                <div>
-                    <h1 class="relogio" id="segundo">00S</h1>
-                    
-                </div>
+    <section>
+        <div id="principal">
+            <div id="texto">
+                <h1 class="tituloEsub" id="titulo">REVIVA O ÉPICO</h1>
+                <h3 class="tituloEsub">DE 01 A 04 DE DEZEMBRO</h3>
+                <p>Você consegue sentir? É aquela sensação de 
+                    finalmente poder falar em voz alta: "estamos em casa". 
+                    Sim, em dezembro de 2022, teremos a volta da CCXP física. 
+                    Mas não será qualquer CCXP, vai ser a maior de todos os tempos. 
+                    Prepare-se para visitar seus universos favoritos, explorar o 
+                    Artists' Valley, se emocionar nos auditórios e encontrar aventuras 
+                    épicas a cada passo pelos nossos corredores.</p>
             </div>
-            <h3>PARA A MAIOR CCXP DE TODOS OS TEMPOS</h3>
-            <video height="370px" controls autoplay loop muted playsinline><source src="video/Arlequina.mp4" type="video/mp4"></video>
+            <div id="animado">
+                <div class="timer">
+                    <div>
+                        <h1 class="relogio" id="dia">00D</h1>
+                        
+                    </div>
+                    <div>
+                        <h1 class="relogio" id="hora">00H</h1>
+                        
+                    </div>
+                    <div>
+                        <h1 class="relogio" id="minuto">00M</h1>
+                        
+                    </div>
+                    <div>
+                        <h1 class="relogio" id="segundo">00S</h1>
+                        
+                    </div>
+                </div>
+                <h3>PARA A MAIOR CCXP DE TODOS OS TEMPOS</h3>
+                <video height="370px" controls autoplay loop muted playsinline><source src="video/Arlequina.mp4" type="video/mp4"></video>
+            </div>
+        </div>
+        <div id="rodape">
+            <div id="ingressos">
+                <h3>AINDA DÁ TEMPO DE GARANTIR O SEU, MAS CORRE!</h3>
+                <img src="img/ingresso1.svg" onclick="selectCard('#quinta')" onmouseover="highlightCard('#quinta')" onmouseout="highlightCard('#quinta')" id="quinta" alt="">
+                <img src="img/ingresso2.svg" onclick="selectCard('#sexta')" onmouseover="highlightCard('#sexta')" onmouseout="highlightCard('#sexta')" id="sexta" alt="">
+                <img src="img/ingresso3.svg" onclick="selectCard('#sabado')" onmouseover="highlightCard('#sabado')" onmouseout="highlightCard('#sabado')" id="sabado" alt="">
+                <img src="img/ingresso4.svg" onclick="selectCard('#domingo')" onmouseover="highlightCard('#domingo')" onmouseout="highlightCard('#domingo')" id="domingo" alt="">
+            </div>
+            <div id="botao">
+                <button onclick="showSelectedCards()">GARANTA O SEU!</button>
+            </div>
+        </div>
+    </section>
 
-        </div>
+    <div>
+        <form action="">
+            <input type="email" placeholder="Seu email" name="email" id="" required>
+            <input type="submit" value="Enviar">
+        </form>
     </div>
-    <div id="rodape">
-        <div id="ingressos">
-            <h3>AINDA DÁ TEMPO DE GARANTIR O SEU, MAS CORRE!</h3>
-            <img src="img/ingresso1.svg" onclick="selectCard('#quinta')" onmouseover="highlightCard('#quinta')" onmouseout="highlightCard('#quinta')" id="quinta" alt="">
-            <img src="img/ingresso2.svg" onclick="selectCard('#sexta')" onmouseover="highlightCard('#sexta')" onmouseout="highlightCard('#sexta')" id="sexta" alt="">
-            <img src="img/ingresso3.svg" onclick="selectCard('#sabado')" onmouseover="highlightCard('#sabado')" onmouseout="highlightCard('#sabado')" id="sabado" alt="">
-            <img src="img/ingresso4.svg" onclick="selectCard('#domingo')" onmouseover="highlightCard('#domingo')" onmouseout="highlightCard('#domingo')" id="domingo" alt="">
-        </div>
-        <div id="botao">
-            <button onclick="showSelectedCards()">GARANTA O SEU!</button>
-        </div>
-    </div>
+
     <script src="script.js"></script>
     <script src="main.js"></script>
     
